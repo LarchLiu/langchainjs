@@ -14,7 +14,9 @@ const entrypoints = {
   base_language: "base_language/index",
   // tools
   tools: "tools/index",
+  "tools/aws_lambda": "tools/aws_lambda",
   "tools/calculator": "tools/calculator",
+  "tools/webbrowser": "tools/webbrowser",
   // chains
   chains: "chains/index",
   "chains/load": "chains/load",
@@ -38,10 +40,13 @@ const entrypoints = {
   // vectorstores
   vectorstores: "vectorstores/index",
   "vectorstores/base": "vectorstores/base",
+  "vectorstores/memory": "vectorstores/memory",
   "vectorstores/chroma": "vectorstores/chroma",
   "vectorstores/hnswlib": "vectorstores/hnswlib",
+  "vectorstores/mongo": "vectorstores/mongo",
   "vectorstores/pinecone": "vectorstores/pinecone",
   "vectorstores/supabase": "vectorstores/supabase",
+  "vectorstores/opensearch": "vectorstores/opensearch",
   "vectorstores/milvus": "vectorstores/milvus",
   "vectorstores/prisma": "vectorstores/prisma",
   // text_splitter
@@ -115,7 +120,9 @@ const deprecatedNodeOnly = [
 // Therefore they are no tested in the generated test-exports-* packages.
 const requiresOptionalDependency = [
   "agents/load",
+  "tools/aws_lambda",
   "tools/calculator",
+  "tools/webbrowser",
   "chains/load",
   "embeddings/cohere",
   "llms/load",
@@ -125,8 +132,10 @@ const requiresOptionalDependency = [
   "prompts/load",
   "vectorstores/chroma",
   "vectorstores/hnswlib",
+  "vectorstores/mongo",
   "vectorstores/pinecone",
   "vectorstores/supabase",
+  "vectorstores/opensearch",
   "vectorstores/milvus",
   "document_loaders/web/cheerio",
   "document_loaders/web/puppeteer",
